@@ -20,6 +20,6 @@ CODES = {
 }
 OFF = "\033[0m"
 
-for KEY, VALUE in CODES.items():
-    print(f"┏ print(\"\\033[{VALUE}m {KEY} \\033[0m\")")
-    print(f"┗ \033[{VALUE}m{KEY}{OFF}\n")
+for COLOR, CODE in CODES.items():
+    print(f"┏ print(\"\\033[{CODE}m {COLOR} \\033[0m\")")
+    print(f"┗ \e[{CODE}m{COLOR}{OFF}")

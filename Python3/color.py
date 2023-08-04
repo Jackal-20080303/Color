@@ -20,5 +20,5 @@ CODES = {
 }
 OFF = "\033[0m"
 
-for KEY, VALUE in CODES.items():
-    print(f"CODE {VALUE} -> \033[{VALUE}m{KEY}{OFF}")
+for COLOR, CODE in CODES.items():
+    print(f"CODE {CODE} -> \033[{CODE}m{COLOR}{OFF}")
