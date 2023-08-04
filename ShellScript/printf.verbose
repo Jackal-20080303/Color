@@ -18,28 +18,10 @@ declare -A CODES=(
   ["LIGHT_CYAN"]="\e[96m"
   ["WHITE"]="\e[97m"
 )
-COLORS=(
-  "BLACK"
-  "RED"
-  "GREEN"
-  "YELLOW"
-  "BLUE"
-  "MAGENTA"
-  "CYAN"
-  "GRAY"
-  "LIGHT_GRAY"
-  "LIGHT_RED"
-  "LIGHT_GREEN"
-  "LIGHT_YELLOW"
-  "LIGHT_BLUE"
-  "LIGHT_MAGENTA"
-  "LIGHT_CYAN"
-  "WHITE"
-)
 OFF="\e[0m"
 
-for COLOR in ${COLORS[@]};
+for COLOR in ${!CODES[@]};
 do
-  printf "printf \"%s %s %s\" -> " ${CODES[$COLOR]} $COLOR $OFF
-  printf "${CODES[$COLOR]}%s$OFF\n" $COLOR
+  printf "┏ printf \"%s %s %s\"\n" ${CODES[$COLOR]} $COLOR $OFF
+  printf "┗━━ ${CODES[$COLOR]}%s$OFF\n" $COLOR
 done

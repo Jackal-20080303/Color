@@ -18,27 +18,9 @@ declare -A CODES=(
   ["LIGHT_CYAN"]=96
   ["WHITE"]=97
 )
-COLORS=(
-  "BLACK"
-  "RED"
-  "GREEN"
-  "YELLOW"
-  "BLUE"
-  "MAGENTA"
-  "CYAN"
-  "GRAY"
-  "LIGHT_GRAY"
-  "LIGHT_RED"
-  "LIGHT_GREEN"
-  "LIGHT_YELLOW"
-  "LIGHT_BLUE"
-  "LIGHT_MAGENTA"
-  "LIGHT_CYAN"
-  "WHITE"
-)
 OFF="\e[0m"
 
-for COLOR in ${COLORS[@]};
+for COLOR in ${!CODES[@]};
 do
   echo -e "CODE ${CODES[$COLOR]} -> \e[${CODES[$COLOR]}m$COLOR$OFF"
 done
