@@ -21,5 +21,5 @@ CODES = {
 OFF = "\033[0m"
 
 for COLOR, CODE in CODES.items():
-    print(f"┏ print(\"\\033[{CODE}m {COLOR} \\033[0m\")")
-    print(f"┗━ \033[{CODE}m{COLOR}{OFF}")
+    print(f"CODE {CODE} -> \033[{CODE}m{COLOR}{OFF}")
+    print()

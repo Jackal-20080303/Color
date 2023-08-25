@@ -8,3 +8,4 @@ WORDS = ["BLACK", "RED", "GREEN", "YELLOW", "BLUE", "MAGENTA", "CYAN", "WHITE", 
 for COLOR, WORD in zip(TERM_COLORS, WORDS):
     print(f"{COLOR} -> ", end = "")
     cprint(WORD, COLOR)
+    print()

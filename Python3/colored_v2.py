@@ -6,5 +6,6 @@ TERM_COLORS = ["black", "red", "green", "yellow", "blue", "magenta", "cyan", "wh
 WORDS = ["BLACK", "RED", "GREEN", "YELLOW", "BLUE", "MAGENTA", "CYAN", "WHITE", "LIGHT_GREY", "DARK_GREY", "LIGHT_RED", "LIGHT_GREEN", "LIGHT_YELLOW", "LIGHT_BLUE", "LIGHT_MAGENTA", "LIGHT_CYAN"]
 
 for COLOR, WORD in zip(TERM_COLORS, WORDS):
-    print(f"┏ print(colored(\"{WORD}\", {COLOR}))")
-    print(f"┗━ {colored(WORD, COLOR)}")
+    print(f"┏━ print(colored(\"{WORD}\", {COLOR}))")
+    print(f"┗━━━ {colored(WORD, COLOR)}")
+    print()

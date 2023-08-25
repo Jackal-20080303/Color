@@ -9,27 +9,28 @@ struct COLOR_CODE {
 };
 
 struct COLOR_CODE CODES[] = {
-  {"BLACK", 30},
-  {"RED", 31},
-  {"GREEN", 32},
-  {"YELLOW", 33},
-  {"BLUE", 34},
-  {"MAGENTA", 35},
-  {"CYAN", 36},
-  {"GRAY", 37},
-  {"LIGHT_GRAY", 90},
-  {"LIGHT_RED", 91},
-  {"LIGHT_GREEN", 92},
-  {"LIGHT_YELLOW", 93},
-  {"LIGHT_BLUE", 94},
-  {"LIGHT_MAGENTA", 95},
-  {"LIGHT_CYAN", 96},
-  {"WHITE", 97}
+  {"Black", 30},
+  {"Red", 31},
+  {"Green", 32},
+  {"Yellow", 33},
+  {"Blue", 34},
+  {"Magenta", 35},
+  {"Cyan", 36},
+  {"Gray", 37},
+  {"LightGray", 90},
+  {"LightRed", 91},
+  {"LightGreen", 92},
+  {"LightYellow", 93},
+  {"LightBlue", 94},
+  {"LightMagenta", 95},
+  {"LightCyan", 96},
+  {"White", 97}
 };
 
 int main() {
   for (int i = 0; i < sizeof(CODES) / sizeof(CODES[0]); i++) {
     printf("CODE %d -> \033[0%dm%s%s\n", CODES[i].CODE, CODES[i].CODE, CODES[i].COLOR, OFF);
+    printf("\n");
   }
 }
 
